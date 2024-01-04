@@ -12,9 +12,9 @@ if wezterm.config_builder then
 end
 
 if not helpers.is_windows() then
-  config.font_size = 15.0
+  config.font_size = 14.0
 else
-  config.font_size = 13.0
+  config.font_size = 12.0
 end
 
 config.color_scheme = 'Ayu Dark (Gogh)'
