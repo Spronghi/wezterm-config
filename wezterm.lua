@@ -1,3 +1,4 @@
+local helpers = require 'helpers'
 -- Pull in the wezterm API
 local wezterm = require 'wezterm'
 
@@ -10,8 +11,15 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
+if helpers.ismac() then
+  config.font_size = 15.0
+end
+
+if helpers.iswindows() then
+  config.font_size = 15.0
+end
+
 config.color_scheme = 'Ayu Dark (Gogh)'
-config.font_size = 13.0
 config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = false
 config.use_fancy_tab_bar = true
@@ -19,11 +27,13 @@ config.use_fancy_tab_bar = true
 wezterm.font = wezterm.font 'CaskaydiaMono Nerd Font Mono'
 
 config.keys = {
+  -- ALT + w to close the current tab
   {
     key = 'w',
     mods = 'ALT',
     action = wezterm.action.CloseCurrentTab { confirm = true },
   },
+  -- ALT + t to open a new tab
   {
     key = 't',
     mods = 'ALT',
@@ -32,7 +42,7 @@ config.keys = {
 }
 
 for i = 1, 8 do
-  -- CTRL+ALT + number to move to that position
+  -- ALT + number to move to that position
   table.insert(config.keys, {
     key = tostring(i),
     mods = 'ALT',
