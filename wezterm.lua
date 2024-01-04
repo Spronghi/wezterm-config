@@ -18,15 +18,27 @@ config.use_fancy_tab_bar = true
 
 wezterm.font = wezterm.font 'CaskaydiaMono Nerd Font Mono'
 
-config.keys = {}
+config.keys = {
+  {
+    key = 'w',
+    mods = 'ALT',
+    action = wezterm.action.CloseCurrentTab { confirm = true },
+  },
+  {
+    key = 't',
+    mods = 'ALT',
+    action = wezterm.action.SpawnTab 'CurrentPaneDomain',
+  }
+}
 
 for i = 1, 8 do
   -- CTRL+ALT + number to move to that position
   table.insert(config.keys, {
     key = tostring(i),
     mods = 'ALT',
-    action = wezterm.action.MoveTab(i - 1),
+    action = wezterm.action.ActivateTab(i - 1),
   })
 end
+
 -- and finally, return the configuration to wezterm
 return config
