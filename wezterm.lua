@@ -12,13 +12,12 @@ if wezterm.config_builder then
 end
 
 if not helpers.is_windows() then
-  config.font_size = 14.0
+  config.font_size = 15.0
 else
   config.font_size = 12.0
 end
 
 config.color_scheme = 'Ayu Dark (Gogh)'
-config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = false
 config.use_fancy_tab_bar = true
 
