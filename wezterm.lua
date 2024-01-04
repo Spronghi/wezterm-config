@@ -11,12 +11,10 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
-if helpers.ismac() then
+if not helpers.is_windows() then
   config.font_size = 15.0
-end
-
-if helpers.iswindows() then
-  config.font_size = 15.0
+else
+  config.font_size = 13.0
 end
 
 config.color_scheme = 'Ayu Dark (Gogh)'
