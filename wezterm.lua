@@ -11,9 +11,10 @@ if wezterm.config_builder then
 end
 
 config.color_scheme = 'Ayu Dark (Gogh)'
-config.font_size = 15.0
-config.hide_tab_bar_if_only_one_tab = false
+config.font_size = 13.0
+config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = false
+config.use_fancy_tab_bar = true
 
 wezterm.font = wezterm.font 'CaskaydiaMono Nerd Font Mono'
 
