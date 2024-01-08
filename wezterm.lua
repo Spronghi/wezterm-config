@@ -17,7 +17,7 @@ else
   config.font_size = 12.0
 end
 
-config.color_scheme = 'ayu'
+config.color_scheme = 'Ayu Dark (Gogh)'
 config.tab_bar_at_bottom = false
 config.use_fancy_tab_bar = true
 
