@@ -1,6 +1,8 @@
 local helpers = require 'helpers'
 -- Pull in the wezterm API
 local wezterm = require 'wezterm'
+-- Wezterm actions
+local act = wezterm.action
 
 -- This table will hold the configuration.
 local config = {}
@@ -17,6 +19,7 @@ else
   config.font_size = 12.0
 end
 
+config.hide_tab_bar_if_only_one_tab = false
 config.tab_bar_at_bottom = false
 config.use_fancy_tab_bar = true
 
@@ -28,20 +31,61 @@ config.colors = {
   cursor_fg = 'white',
 }
 
-
 config.keys = {
-  -- ALT + w to close the current tab
+  -- Close the current pane
   {
     key = 'w',
     mods = 'ALT',
-    action = wezterm.action.CloseCurrentTab { confirm = true },
+    action = act.CloseCurrentPane { confirm = true },
   },
-  -- ALT + t to open a new tab
+  {
+    key = 'w',
+    mods = 'CMD',
+    action = act.CloseCurrentPane { confirm = true },
+  },
+
+  -- New tab
   {
     key = 't',
     mods = 'ALT',
-    action = wezterm.action.SpawnTab 'CurrentPaneDomain',
-  }
+    action = act.SpawnTab 'CurrentPaneDomain',
+  },
+
+  -- Split down
+  {
+    key = 'd',
+    mods = 'ALT',
+    action = act.SplitVertical { domain = 'CurrentPaneDomain' },
+  },
+
+  -- Split right
+  {
+    key = 'r',
+    mods = 'ALT',
+    action = act.SplitHorizontal { domain = 'CurrentPaneDomain' },
+  },
+
+  -- Pane navigation
+  {
+    key = 'h',
+    mods = 'ALT',
+    action = act.ActivatePaneDirection 'Left',
+  },
+  {
+    key = 'l',
+    mods = 'ALT',
+    action = act.ActivatePaneDirection 'Right',
+  },
+  {
+    key = 'k',
+    mods = 'ALT',
+    action = act.ActivatePaneDirection 'Up',
+  },
+  {
+    key = 'j',
+    mods = 'ALT',
+    action = act.ActivatePaneDirection 'Down',
+  },
 }
 
 for i = 1, 8 do
@@ -49,7 +93,7 @@ for i = 1, 8 do
   table.insert(config.keys, {
     key = tostring(i),
     mods = 'ALT',
-    action = wezterm.action.ActivateTab(i - 1),
+    action = act.ActivateTab(i - 1),
   })
 end
 
