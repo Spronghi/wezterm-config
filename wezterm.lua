@@ -38,53 +38,12 @@ config.keys = {
     mods = 'ALT',
     action = act.CloseCurrentPane { confirm = true },
   },
-  {
-    key = 'w',
-    mods = 'CMD',
-    action = act.CloseCurrentPane { confirm = true },
-  },
 
   -- New tab
   {
     key = 't',
     mods = 'ALT',
     action = act.SpawnTab 'CurrentPaneDomain',
-  },
-
-  -- Split down
-  {
-    key = 'd',
-    mods = 'ALT',
-    action = act.SplitVertical { domain = 'CurrentPaneDomain' },
-  },
-
-  -- Split right
-  {
-    key = 'r',
-    mods = 'ALT',
-    action = act.SplitHorizontal { domain = 'CurrentPaneDomain' },
-  },
-
-  -- Pane navigation
-  {
-    key = 'h',
-    mods = 'ALT',
-    action = act.ActivatePaneDirection 'Left',
-  },
-  {
-    key = 'l',
-    mods = 'ALT',
-    action = act.ActivatePaneDirection 'Right',
-  },
-  {
-    key = 'k',
-    mods = 'ALT',
-    action = act.ActivatePaneDirection 'Up',
-  },
-  {
-    key = 'j',
-    mods = 'ALT',
-    action = act.ActivatePaneDirection 'Down',
   },
 }
 
