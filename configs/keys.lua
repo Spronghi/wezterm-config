@@ -11,14 +11,14 @@ return function(config)
     -- Close the current tab
     {
       key = 'w',
-      mods = 'ALT|CMD',
+      mods = 'ALT',
       action = act.CloseCurrentTab { confirm = true },
     },
 
     -- New tab
     {
       key = 't',
-      mods = 'ALT|CMD',
+      mods = 'ALT',
       action = act.SpawnTab 'CurrentPaneDomain',
     },
 
@@ -88,7 +88,7 @@ return function(config)
     -- ALT + number to move to that position
     table.insert(config.keys, {
       key = tostring(i),
-      mods = 'CMD|ALT',
+      mods = 'ALT',
       action = act.ActivateTab(i - 1),
     })
   end

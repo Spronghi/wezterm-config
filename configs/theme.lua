@@ -8,11 +8,9 @@ return function(config)
   config.tab_bar_at_bottom = false
 
   config.window_padding = {
-    left = 2,
-    right = 2,
-    top = 2,
     bottom = 0,
   }
+
   -- color scheme
   config.color_scheme = 'Ayu Dark (Gogh)'
   config.colors = {
