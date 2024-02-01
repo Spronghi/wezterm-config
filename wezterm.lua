@@ -26,14 +26,14 @@ config.bypass_mouse_reporting_modifiers = 'ALT'
 
 wezterm.font = wezterm.font 'CaskaydiaMono Nerd Font Mono'
 
--- leader key
-config.leader = { key = ' ', mods = 'CTRL', timeout_milliseconds = 1000 }
-
 -- color scheme
 config.color_scheme = 'Ayu Dark (Gogh)'
 config.colors = {
   cursor_fg = 'white',
 }
+
+-- leader key
+config.leader = { key = ' ', mods = 'CTRL', timeout_milliseconds = 4000 }
 
 config.keys = {
   -- Close the current tab
