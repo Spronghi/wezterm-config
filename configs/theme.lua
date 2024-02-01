@@ -3,11 +3,16 @@ local helpers = require 'helpers'
 local wezterm = require 'wezterm'
 
 return function(config)
-  config.hide_tab_bar_if_only_one_tab = false
-  config.tab_bar_at_bottom = false
-
   wezterm.font = wezterm.font 'CaskaydiaMono Nerd Font Mono'
 
+  config.tab_bar_at_bottom = false
+
+  config.window_padding = {
+    left = 2,
+    right = 2,
+    top = 2,
+    bottom = 0,
+  }
   -- color scheme
   config.color_scheme = 'Ayu Dark (Gogh)'
   config.colors = {
