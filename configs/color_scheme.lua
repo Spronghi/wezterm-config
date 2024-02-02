@@ -11,6 +11,9 @@ return function(config)
 
   config.window_padding = {
     bottom = 0,
+    top = 0,
+    left = 0,
+    right = 0,
   }
 
   config.inactive_pane_hsb = {
