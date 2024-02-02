@@ -15,7 +15,13 @@ return function(config)
       action = act.CloseCurrentTab { confirm = true },
     },
 
-    { key = 'X', mods = 'CTRL', action = wezterm.action.ActivateCopyMode }, -- New tab
+    -- paste command for windows
+    {
+      key = 'V',
+      mods = 'ALT',
+      action = act.PasteFrom 'Clipboard'
+    },
+
     {
       key = 't',
       mods = 'ALT',
