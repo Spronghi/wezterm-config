@@ -15,11 +15,11 @@ return function(config)
       action = act.CloseCurrentTab { confirm = true },
     },
 
-    -- paste command for windows
+    -- prevent windwos from writing ^[[200~ when pasting
     {
-      key = 'V',
-      mods = 'ALT',
-      action = act.PasteFrom 'Clipboard'
+      key = 'v',
+      mods = 'CTRL',
+      action = wezterm.action.Nop
     },
 
     {
