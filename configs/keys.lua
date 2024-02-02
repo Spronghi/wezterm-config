@@ -22,6 +22,7 @@ return function(config)
       action = wezterm.action.Nop
     },
 
+    -- new tab
     {
       key = 't',
       mods = 'ALT',
