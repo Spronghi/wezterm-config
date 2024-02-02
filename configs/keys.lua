@@ -15,7 +15,7 @@ return function(config)
       action = act.CloseCurrentTab { confirm = true },
     },
 
-    -- New tab
+    { key = 'X', mods = 'CTRL', action = wezterm.action.ActivateCopyMode }, -- New tab
     {
       key = 't',
       mods = 'ALT',
@@ -80,6 +80,35 @@ return function(config)
       key = "p",
       mods = "CTRL",
       action = wezterm.action { PaneSelect = {} }
+    },
+
+    -- activate copy mode
+    {
+      key = 'x',
+      mods = 'LEADER',
+      action = wezterm.action.ActivateCopyMode
+    },
+
+    -- vim motions to move through panes
+    {
+      key = 'h',
+      mods = 'CTRL',
+      action = act.ActivatePaneDirection 'Left',
+    },
+    {
+      key = 'l',
+      mods = 'CTRL',
+      action = act.ActivatePaneDirection 'Right',
+    },
+    {
+      key = 'k',
+      mods = 'CTRL',
+      action = act.ActivatePaneDirection 'Up',
+    },
+    {
+      key = 'j',
+      mods = 'CTRL',
+      action = act.ActivatePaneDirection 'Down',
     },
 
   }
