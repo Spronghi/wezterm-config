@@ -11,6 +11,10 @@ return function(config)
     bottom = 0,
   }
 
+  config.inactive_pane_hsb = {
+    brightness = 0.6,
+  }
+
   -- color scheme
   config.color_scheme = 'Ayu Dark (Gogh)'
   config.colors = {
