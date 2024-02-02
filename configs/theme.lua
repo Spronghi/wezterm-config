@@ -8,8 +8,6 @@ return function(config)
   config.tab_bar_at_bottom = false
 
   config.window_padding = {
-    left = 0,
-    right = 0,
     bottom = 0,
   }
 
