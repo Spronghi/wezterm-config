@@ -3,6 +3,7 @@ local helpers = require 'helpers'
 local wezterm = require 'wezterm'
 
 local bg_color = '#0A0E14'
+local selection_bg = '#1c2b3a'
 
 return function(config)
   wezterm.font = wezterm.font 'CaskaydiaMono Nerd Font Mono'
@@ -36,7 +37,7 @@ return function(config)
     cursor_fg = bg_color,
 
     -- selection background should match the color scheme on nvim
-    selection_bg = '#1c2b3a',
+    selection_bg = selection_bg,
 
     tab_bar = {
       -- The color of the strip that goes along the top of the window
@@ -73,7 +74,7 @@ return function(config)
       -- Inactive tabs are the tabs that do not have focus
       inactive_tab = {
         bg_color = bg_color,
-        fg_color = 'gray',
+        fg_color = selection_bg,
       },
 
       new_tab = {
