@@ -12,8 +12,13 @@ The configuration is a mix between tmux and Mac shortcuts.
 
 TODO list of shortcuts
 
-Remember to install [oh-my-zsh](https://ohmyz.sh/#install) with the [simple](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#simple) theme.
+## Other dependencies
 
+These depencies are not necessary, but they improve the user experience :D
+ - [oh-my-zsh](https://ohmyz.sh/#install)
+ - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions?tab=readme-ov-file)
+ - [Starship](https://starship.rs/).
+ - [fzf](https://github.com/junegunn/fzf)
 ## Fonts
 
 My favorite font is [Cascadia Mono](https://github.com/microsoft/cascadia-code).
