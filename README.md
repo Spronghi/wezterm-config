@@ -12,7 +12,7 @@ The configuration is a mix between tmux and Mac shortcuts.
 
 TODO list of shortcuts
 
-Remember to install [oh-my-zsh](https://ohmyz.sh/#install).
+Remember to install [oh-my-zsh](https://ohmyz.sh/#install) with the [simple](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#simple) theme.
 
 ## Fonts
 
