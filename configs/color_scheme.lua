@@ -34,7 +34,7 @@ return function(config)
 
   config.colors = {
     -- cursor text color should be white otherwise it's invisible in the vim color scheme
-    cursor_fg = bg_color,
+    cursor_fg = 'white',
 
     -- selection background should match the color scheme on nvim
     selection_bg = selection_bg,
