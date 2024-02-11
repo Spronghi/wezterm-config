@@ -12,6 +12,8 @@ The configuration is a mix between tmux and Mac shortcuts.
 
 TODO list of shortcuts
 
+Remember to install [oh-my-zsh](https://ohmyz.sh/#install).
+
 ## Fonts
 
 My favorite font is [Cascadia Mono](https://github.com/microsoft/cascadia-code).
