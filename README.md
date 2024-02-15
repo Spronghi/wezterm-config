@@ -19,6 +19,13 @@ These depencies are not necessary, but they improve the user experience :D
  - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions?tab=readme-ov-file)
  - [Starship](https://starship.rs/).
  - [fzf](https://github.com/junegunn/fzf)
+ - [zoxide](https://github.com/ajeetdsouza/zoxide)
+
+## Things I want to try
+
+These are dependencies I'd like to try but I never had the time to
+ - [warp](https://www.warp.dev/)
+
 ## Fonts
 
 My favorite font is [Cascadia Mono](https://github.com/microsoft/cascadia-code).
