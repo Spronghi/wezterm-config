@@ -26,6 +26,7 @@ These depencies are not necessary, but they improve the user experience :D
 As zsh config just add something like this at the end
 
 ``` config
+# ~/.config/.zshrc
 ...
 ZSH_THEME="simple"
 ...
@@ -40,6 +41,22 @@ eval "$(zoxide init --cmd cd zsh)"
 ```
 
 Just to enable `starship` and `zoxide` with the theme `simple`.
+
+## Starship
+
+The config here is also very simple
+
+```
+# ~/.config/starship.toml
+
+command_timeout = 2000
+add_newline = false
+
+[directory]
+truncate_to_repo = false
+truncation_length = 3
+truncation_symbol = ".../"
+```
 
 ## Things I want to try
 
