@@ -21,6 +21,26 @@ These depencies are not necessary, but they improve the user experience :D
  - [fzf](https://github.com/junegunn/fzf)
  - [zoxide](https://github.com/ajeetdsouza/zoxide)
 
+## zsh
+
+As zsh config just add something like this at the end
+
+``` config
+...
+ZSH_THEME="simple"
+...
+plugins=(
+  git
+  zsh-autosuggestions
+)
+...
+# Starship start
+eval "$(starship init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
+```
+
+Just to enable `starship` and `zoxide` with the theme `simple`.
+
 ## Things I want to try
 
 These are dependencies I'd like to try but I never had the time to
